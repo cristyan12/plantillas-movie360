@@ -1,5 +1,5 @@
 section.hero.is-bold {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/fifa-2018-wp.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../fifa-2018-wp.jpg");
 	background-size: cover;
 	background-position: center center;
 }

@@ -7,13 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
    
    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
-    <section id="carousel">
+	<section id="navbar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">
+            <img src="logo.png" width="20" height="20" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="#gallery">Gallery</a>
+              <a class="nav-item nav-link" href="#about">About</a>
+            </div>
+          </div>
+        </nav>
+    </section>
+
+    <div class="space"></div> <!-- navbar -->
+
+    <section id="carousel" class="">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -22,13 +42,13 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="img/game_1.jpg" alt="First slide">
+            <img class="d-block w-100" src="assets/img/game_1_comprimido.jpg" alt="First slide">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="img/game_2.png" alt="Second slide">
+            <img class="d-block w-100" src="assets/img/game_2_comprimido.png" alt="Second slide">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="img/game_3.jpg" alt="Third slide">
+            <img class="d-block w-100" src="assets/img/game_3_comprimido.jpg" alt="Third slide">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -42,32 +62,14 @@
       </div>
     </section>
 
-    <section id="navbar">
-        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="#">
-            <img src="logo.png" width="20" height="20" alt="">
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link" href="#gallery">Gallery</a>
-              <a class="nav-item nav-link" href="#">About</a>
-            </div>
-          </div>
-        </nav>
-    </section>
-
-    <div class="space"></div>
+    <div class="mb-5"></div>
 
     <section id="gallery" class="container">
       <h2 class="display-4 mb-3">Últimos títulos agregados</h2>
       <div class="row">
           <div class="card-group">
               <div class="card text-white bg-dark">
-                  <img src="http://lorempixel.com/400/200/abstract" class="card-img-top img-fluid">
+                  <img src="http://lorempixel.com/400/200/" class="card-img-top">
                   <footer class="card-footer">
                     <h4 class="card-text">{{ Título }}</h4>
                     <p class="card-text">{{ Precio }}</p>
@@ -89,7 +91,7 @@
                   </footer>
               </div>
               <div class="card text-white bg-secondary">
-                  <img src="http://lorempixel.com/400/200/animals" class="card-img-top img-fluid">
+                  <img src="http://lorempixel.com/400/200/nightlife" class="card-img-top img-fluid">
                   <footer class="card-footer">
                     <h4 class="card-text">{{ Título }}</h4>
                     <p class="card-text">{{ Precio }}</p>
@@ -97,7 +99,9 @@
               </div>
           </div>
       </div>
+
       <div class="mb-3"></div>
+      
       <div class="row">
         <h2 class="display-4 mb-3">Más populares</h2>
         <div class="card-group">
@@ -116,7 +120,7 @@
               </footer>
             </div>
             <div class="card text-white bg-success">
-              <img src="http://lorempixel.com/400/200/nightlife" class="card-img-top img-fluid">
+              <img src="http://lorempixel.com/400/200/abstract" class="card-img-top img-fluid">
               <footer class="card-footer">
                 <h4 class="card-text">{{ Título }}</h4>
                 <p class="card-text">{{ Precio }}</p>
@@ -155,12 +159,18 @@
             </div>
         </div>
       </div>
-    </section> <!-- .container -->
+    </section> <!-- .container card-->
+
+	<div class="mb-5"></div>
+
+	<footer id="about" class="container footer bg-dark text-white">
+		<h2 class="display-4">Footer</h2>
+	</footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
   </body>
 </html>
