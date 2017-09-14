@@ -38,3 +38,6 @@ img.card-img-top:hover {
     text-decoration: none;
     text-transform: uppercase;
 }
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    height: 300px;
+}
